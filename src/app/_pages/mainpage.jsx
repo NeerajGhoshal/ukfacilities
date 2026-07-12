@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 export default function UKFacilityManagement() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,7 +12,9 @@ export default function UKFacilityManagement() {
 
       {/* NAV */}
       <nav className="nav">
-        <div className="nav-logo">UK <span>Facility</span> Management</div>
+        <div className="nav-logo"> <Image src="/logo.png" alt="Company Logo" width={42} height={30} /> 
+        Facility Management</div>
+       
         <ul className="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
