@@ -305,6 +305,9 @@
   color: var(--navy);
   margin-bottom: 1.2rem;
 }
+.section-title span {
+  color: var(--gold);
+}
 .section-sub {
   font-size: 1rem;
   line-height: 1.75;
@@ -699,47 +702,45 @@
   margin: 0 auto 2.5rem;
   line-height: 1.7;
 }
-.cta-form {
+.cta-content {
   display: flex;
-  gap: 0.8rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 600px;
+  justify-content: space-around;
+  width: 70%;
   margin: 0 auto;
 }
-.cta-form input {
-  flex: 1;
-  min-width: 200px;
-  padding: 0.85rem 1.2rem;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.12);
-  color: white;
-  border-radius: 2px;
-  font-size: 0.95rem;
-  outline: none;
-  transition: border-color 0.2s;
+.cta-details {
+  width: 50%;
+  margin-right: 2rem;
+  border: 1px solid white;
+  border-radius: 20px;
 }
-.cta-form input::placeholder {
-  color: rgba(255, 255, 255, 0.55);
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.cta-form input:focus {
-  border-color: rgba(255, 255, 255, 0.7);
+.contact-icon {
+  /*color: var(--gold);*/
+  color: var(--white);
+  margin-right: 0.8rem;
+  font-size: 25px;
+  width: 20%;
 }
-.btn-white {
-  background: var(--white);
-  color: var(--teal);
-  padding: 0.85rem 2rem;
-  border: none;
-  border-radius: 2px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background 0.2s;
+.contact-info {
+  color: var(--white);
+  width: 60%;
+  text-align: left;
 }
-.btn-white:hover {
-  background: var(--cream);
+.div-sep {
+  width: 85%;
+  height: 1px;
+  background: rgba(128, 126, 126, 0.541);
+  margin: 15px auto;
 }
-
+.cta-map {
+  width: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 /* FOOTER */
 .ukfms-root footer {
   background: var(--navy);

@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { PiMapPinLight, PiPhone } from "react-icons/pi";
+import { VscMail } from "react-icons/vsc";
 
 export default function UKFacilityManagement() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +16,7 @@ export default function UKFacilityManagement() {
         <div className="nav-logo">
           {" "}
           <Image src="/logo.png" alt="Company Logo" width={42} height={30} />
-          Facility Management Services
+          <span>Facility Management Services</span>
         </div>
 
         <ul className="nav-links">
@@ -33,11 +35,13 @@ export default function UKFacilityManagement() {
           <li>
             <a href="#contact">Contact</a>
           </li>
+          {/* 
           <li>
             <a href="#contact" className="nav-cta">
               Get a Quote
             </a>
-          </li>
+          </li> 
+          */}
         </ul>
         <button
           className={`nav-toggle ${menuOpen ? "open" : ""}`}
@@ -331,7 +335,7 @@ export default function UKFacilityManagement() {
           <div>
             <span className="section-tag">The Difference</span>
             <h2 className="section-title">
-              Why Choose UK Facility Management?
+              Why Choose <span>UK Facility Management</span>?
             </h2>
             <div className="divider"></div>
             <p className="section-sub">
@@ -429,26 +433,39 @@ export default function UKFacilityManagement() {
       {/* CTA */}
       <section className="cta-section" id="contact">
         <h2>Ready to Elevate Your Facility Standards?</h2>
-        <p>
-          Whether you manage a corporate office, educational institution,
-          healthcare facility, or industrial unit—we have the expertise and
-          commitment to transform your workplace.
-        </p>
-        <form
-          className="cta-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
-        >
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Email Address" required />
-          <button className="btn-white" type="submit">
-            Get Free Quote
-          </button>
-        </form>
-        <p style={{ marginTop: "1.5rem", fontSize: "0.85rem", opacity: 0.65 }}>
-          Or call us directly to discuss your requirements with our team.
-        </p>
+
+        <div className="cta-content">
+          <div className="cta-details">
+            Contact Details
+            <div className="contact">
+              <div className="contact-icon">
+                <PiMapPinLight />
+              </div>
+              <div className="contact-info">
+                C-314, Sumel -11, Nr. Namaste Circle, Shahibag Road,
+                Ahmedabad-380004
+              </div>
+              <div className="div-sep" />
+              <div className="contact-icon">
+                <PiPhone />
+              </div>
+              <div className="contact-info">+91 91739 31229</div>
+              <div className="div-sep" />
+              <div className="contact-icon">
+                <VscMail />
+              </div>
+              <div className="contact-info"> ultraklean.facility@gmail.com</div>
+            </div>
+          </div>
+
+          <div className="cta-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d544.3687986251018!2d72.58753257897091!3d23.047544093226232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e846c704e5c65%3A0x5f0ca4cf2f14ee08!2sSUMEL%2011%2C%20Shahibag%2C%20Ahmedabad%2C%20Gujarat%20380004!5e1!3m2!1sen!2sin!4v1784223896636!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+            ></iframe>
+          </div>
+        </div>
       </section>
 
       {/* FOOTER */}
@@ -456,7 +473,7 @@ export default function UKFacilityManagement() {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="logo">
-              UK <span>Facility</span> Management Services
+              <span>UK Facility Management Services</span>
             </div>
             <p>
               A trusted partner in comprehensive facility management and support
