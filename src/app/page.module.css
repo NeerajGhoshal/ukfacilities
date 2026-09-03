@@ -1,0 +1,8 @@
+.rootLayout {
+  background-color: var(--Background-main);
+  min-width: 1440px;
+}
+.mainLayout {
+  margin: 0 auto;
+  min-width: 1440px;
+}

@@ -1,0 +1,558 @@
+/* =========================================
+   CLIENT FEEDBACK SECTION
+========================================= */
+
+.client-feedback-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  padding: clamp(45px, 6vh, 80px) 0 clamp(35px, 5vh, 60px);
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.feedback-container {
+  position: relative;
+  width: min(90%, 1320px);
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.feedback-heading {
+  text-align: center;
+  margin-bottom: clamp(35px, 5vh, 55px);
+}
+
+.feedback-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+
+  margin-bottom: 18px;
+
+  color: #bd963d;
+
+  font-family: Arial, sans-serif;
+  font-size: clamp(13px, 1.1vw, 18px);
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.feedback-line {
+  display: block;
+
+  width: 48px;
+  height: 2px;
+
+  background: #bd963d;
+}
+
+.feedback-heading h2 {
+  margin: 0;
+
+  color: #092746;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 4.2vw, 70px);
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+.feedback-heading h2 span {
+  color: #bd963d;
+}
+
+.feedback-heading-line {
+  width: 60px;
+  height: 3px;
+
+  margin: 22px auto 18px;
+
+  background: #bd963d;
+}
+
+.feedback-heading p {
+  margin: 0;
+
+  color: #56606d;
+
+  font-family: Arial, sans-serif;
+  font-size: clamp(16px, 1.35vw, 21px);
+
+  line-height: 1.65;
+}
+
+/* =========================================
+   CAROUSEL
+========================================= */
+
+.feedback-carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.feedback-carousel {
+  display: flex;
+
+  gap: clamp(20px, 2vw, 30px);
+
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: visible;
+
+  padding: 35px 5px 15px;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  box-sizing: border-box;
+}
+
+.feedback-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.feedback-card {
+  position: relative;
+
+  flex: 0 0 calc((100% - 60px) / 3);
+
+  min-width: 0;
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 8px 30px rgba(10, 39, 70, 0.09),
+    0 2px 8px rgba(10, 39, 70, 0.04);
+
+  border-bottom: 2px solid #bd963d;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 15px 35px rgba(10, 39, 70, 0.13);
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.feedback-card-content {
+  padding: 43px 34px 27px;
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.feedback-icon {
+  position: absolute;
+
+  /*
+    IMPORTANT:
+    Explicit width/height prevents SVG
+    from becoming page-sized.
+  */
+
+  width: 88px;
+  height: 88px;
+
+  min-width: 88px;
+  min-height: 88px;
+
+  max-width: 88px;
+  max-height: 88px;
+
+  top: -30px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #092746;
+
+  border: 2px solid #bd963d;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+  box-sizing: border-box;
+
+  z-index: 5;
+
+  overflow: hidden;
+}
+
+/*
+  VERY IMPORTANT:
+  This prevents SVGs from inheriting
+  huge width/height values.
+*/
+
+.feedback-icon svg {
+  display: block;
+
+  width: 48px !important;
+  height: 48px !important;
+
+  min-width: 48px;
+  min-height: 48px;
+
+  max-width: 48px;
+  max-height: 48px;
+
+  color: #ffffff;
+
+  flex: 0 0 48px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote-mark {
+  height: 45px;
+
+  color: #bd963d;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 65px;
+  font-weight: 700;
+
+  line-height: 0.9;
+}
+
+/* =========================================
+   STARS
+========================================= */
+
+.feedback-stars {
+  margin-top: 4px;
+  margin-bottom: 20px;
+
+  color: #bd963d;
+
+  font-size: 21px;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   TESTIMONIAL TEXT
+========================================= */
+
+.feedback-text {
+  margin: 0;
+
+  min-height: 185px;
+
+  color: #535e6b;
+
+  font-family: Arial, sans-serif;
+
+  font-size: clamp(15px, 1.05vw, 18px);
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   SEPARATOR
+========================================= */
+
+.feedback-separator {
+  width: 50px;
+  height: 2px;
+
+  margin: 18px 0;
+
+  background: #bd963d;
+}
+
+/* =========================================
+   PERSON
+========================================= */
+
+.feedback-person {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.person-avatar {
+  width: 49px;
+  height: 49px;
+
+  min-width: 49px;
+  min-height: 49px;
+
+  border-radius: 50%;
+
+  background: #092746;
+
+  border: 2px solid #ffffff;
+
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.person-avatar::before {
+  content: "";
+
+  position: absolute;
+
+  width: 17px;
+  height: 17px;
+
+  top: 8px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+.person-avatar::after {
+  content: "";
+
+  position: absolute;
+
+  width: 29px;
+  height: 17px;
+
+  bottom: 5px;
+
+  border-radius: 18px 18px 7px 7px;
+
+  background: #ffffff;
+}
+
+.person-avatar span {
+  display: none;
+}
+
+.person-info {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1.35;
+}
+
+.person-info strong {
+  color: #092746;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.person-info span {
+  color: #59636f;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+}
+
+/* =========================================
+   DECORATIVE DOTS
+========================================= */
+
+.feedback-dots {
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  opacity: 0.45;
+
+  background-image: radial-gradient(#d7dfdf 2px, transparent 2px);
+
+  background-size: 16px 16px;
+
+  pointer-events: none;
+}
+
+.feedback-dots-left {
+  left: -30px;
+  bottom: 50px;
+}
+
+.feedback-dots-right {
+  right: -20px;
+  top: 0;
+
+  opacity: 0.35;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .feedback-card {
+    flex: 0 0 calc((100% - 25px) / 2);
+  }
+
+  .feedback-text {
+    min-height: 170px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .client-feedback-section {
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  .feedback-container {
+    width: 92%;
+  }
+
+  .feedback-label {
+    gap: 12px;
+
+    font-size: 11px;
+    letter-spacing: 2.5px;
+  }
+
+  .feedback-line {
+    width: 30px;
+  }
+
+  .feedback-heading h2 {
+    font-size: 38px;
+  }
+
+  .feedback-heading p {
+    font-size: 15px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .feedback-carousel {
+    gap: 18px;
+
+    padding-top: 35px;
+  }
+
+  .feedback-card {
+    flex: 0 0 100%;
+  }
+
+  .feedback-card-content {
+    padding: 40px 25px 25px;
+  }
+
+  .feedback-text {
+    min-height: auto;
+
+    font-size: 15px;
+  }
+
+  .feedback-icon {
+    width: 78px;
+    height: 78px;
+
+    min-width: 78px;
+    min-height: 78px;
+
+    max-width: 78px;
+    max-height: 78px;
+
+    top: -39px;
+  }
+
+  .feedback-icon svg {
+    width: 43px !important;
+    height: 43px !important;
+
+    min-width: 43px;
+    min-height: 43px;
+
+    max-width: 43px;
+    max-height: 43px;
+
+    flex-basis: 43px;
+  }
+
+  .quote-mark {
+    font-size: 58px;
+  }
+
+  .feedback-stars {
+    font-size: 18px;
+  }
+
+  .feedback-dots {
+    display: none;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .feedback-heading h2 {
+    font-size: 33px;
+  }
+
+  .feedback-card-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
